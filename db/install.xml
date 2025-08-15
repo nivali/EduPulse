@@ -1,0 +1,32 @@
+<XMLDB PATH="mod/edupulse/db" VERSION="2025010500" COMMENT="Definition of tables for mod_edupulse">
+  <TABLES>
+    <TABLE NAME="edupulse" COMMENT="Stores edupulse instances">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true"/>
+        <FIELD NAME="intro" TYPE="text" NOTNULL="false"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="0"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="edupulse_responses" COMMENT="Stores responses for each edupulse">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="edupulseid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the edupulse"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the user"/>
+        <FIELD NAME="response1" TYPE="text" NOTNULL="false" COMMENT="Response to first question"/>
+        <FIELD NAME="response2" TYPE="text" NOTNULL="false" COMMENT="Response to second question"/>
+        <FIELD NAME="rating" TYPE="int" LENGTH="1" NOTNULL="true" COMMENT="User's rating for the discipline"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Timestamp for when response was created"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="foreign_edupulseid" TYPE="foreign" FIELDS="edupulseid" REFTABLE="edupulse" REFFIELDS="id"/>
+        <KEY NAME="foreign_userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
