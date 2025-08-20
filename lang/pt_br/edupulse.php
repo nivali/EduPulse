@@ -1,11 +1,31 @@
 <?php
-// Este arquivo é parte do Moodle - http://moodle.org/
-// O Moodle é um software livre: você pode redistribuí-lo e/ou modificá-lo
-// sob os termos da Licença Pública Geral GNU conforme publicada pela
-// Free Software Foundation, tanto a versão 3 da Licença, ou
-// (a seu critério) qualquer versão posterior.
+// This file is part of Moodle - https://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
-// Strings para o componente 'mod_edupulse', idioma 'pt_br'
+/**
+ * Language strings for the EduPulse module.
+ *
+ * This file contains the language strings for the EduPulse module in Brazilian Portuguese.
+ *
+ * @package    mod_edupulse
+ * @copyright  2025 Universidade Federal de Santa Catarina
+ * @author     Benjamin Grando Moreira
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+// Strings para o componente 'mod_edupulse', idioma 'pt_br'.
 $string['pluginname'] = 'Questionário de sentimentos';
 $string['pluginadministration'] = 'Administração do EduPulse';
 $string['modulename'] = 'Questionário de sentimentos';
@@ -23,7 +43,7 @@ $string['notifyinfo'] = 'Você já respondeu a este questionário.';
 $string['seeresponse'] = 'Ver sua resposta';
 $string['studentsresponses'] = 'Visualizar Respostas dos Alunos';
 $string['verydissatisfied'] = 'Muito insatisfeito';
-$string['dissatisfied'] = 'Insatisfeito';   
+$string['dissatisfied'] = 'Insatisfeito';
 $string['neutral'] = 'Neutro';
 $string['satisfied'] = 'Satisfeito';
 $string['verysatisfied'] = 'Muito satisfeito';
@@ -33,7 +53,6 @@ $string['invalidvalue'] = 'Valor inválido';
 $string['myresponses'] = 'Minhas Respostas para ';
 $string['date'] = 'Data';
 $string['noresponses'] = 'Você ainda não respondeu a este questionário.';
-$string['invalidvalue'] = 'Valor inválido';
 $string['responsesfor'] = 'Respostas dos Alunos para ';
 $string['noresponsesfound'] = 'Nenhuma resposta encontrada.';
 $string['satisfactiondistribution'] = 'Distribuição das respostas de satisfação';
@@ -42,4 +61,4 @@ $string['viewresponses'] = 'Ver respostas dos alunos';
 $string['responsesubmitted'] = 'Sua resposta foi enviada com sucesso!';
 $string['alreadyanswered'] = 'Você já respondeu a este questionário.';
 $string['viewyourresponse'] = 'Ver sua resposta';
-?>
+$string['noratingselected'] = 'Por favor, selecione uma avaliação.';

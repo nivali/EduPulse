@@ -1,38 +1,62 @@
 <?php
+// This file is part of Moodle - https://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
+
+/**
+ * Access capabilities for the EduPulse module.
+ *
+ * This file defines the capabilities used by the EduPulse module.
+ *
+ * @package    mod_edupulse
+ * @copyright  2025 Benjamin Grando Moreira <nivali@gmail.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 defined('MOODLE_INTERNAL') || die();
 
-$capabilities = array(
+$capabilities = [
 
-    // Capacidade para visualizar suas próprias respostas ao questionário
-    'mod/edupulse:viewownresponses' => array(
+    // Capability to view own responses to the questionnaire.
+    'mod/edupulse:viewownresponses' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_MODULE,
-        'archetypes' => array(
+        'archetypes' => [
             'student' => CAP_ALLOW,
             'teacher' => CAP_ALLOW,
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW,
-        ),
-    ),
+        ],
+    ],
 
-    // Capacidade para visualizar todas as respostas dos alunos
-    'mod/edupulse:viewresponses' => array(
+    // Capability to view all student responses.
+    'mod/edupulse:viewresponses' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_MODULE,
-        'archetypes' => array(
+        'archetypes' => [
             'teacher' => CAP_ALLOW,
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW,
-        ),
-    ),
+        ],
+    ],
 
-    // Capacidade para responder ao questionário
-    'mod/edupulse:submitresponse' => array(
+    // Capability to submit responses to the questionnaire.
+    'mod/edupulse:submitresponse' => [
         'captype' => 'write',
         'contextlevel' => CONTEXT_MODULE,
-        'archetypes' => array(
+        'archetypes' => [
             'student' => CAP_ALLOW,
-        ),
-    ),
-);
+        ],
+    ],
+];
